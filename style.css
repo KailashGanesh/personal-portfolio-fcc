@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,300;0,400;0,600;0,700;0,900;1,300;1,400;1,600;1,700&family=Yellowtail&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+body{
+    font-size: 1.6rem;
+    font-family: 'Titillium Web', sans-serif;;
+    height: 100vh;
+    overflow-y: hidden;
+}
+
+header{
+    position: sticky;
+    top:0;
+    width:100%;
+    background-color: red;
+    height: 3%;
+}
+
+.name{
+    font-family: 'Yellowtail', cursive;
+    font-size: 1.2em;
+}
+
+.container{
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+}
+
+section{
+    height: 100vh;
+    scroll-snap-align: start;
+
+}
+
+.welcome-section{
+    background-color: brown;
+}
+.projects-section{
+    background-color: blue;
+}
+.about-section{
+    background-color: green;
+}
