@@ -1,5 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,300;0,400;0,600;0,700;0,900;1,300;1,400;1,600;1,700&family=Yellowtail&display=swap');
 
+:root{
+    --main-red:#ff0000;
+}
+
+:root {
+    --main-white: #f0f0f0;
+    --main-red: #be3144;
+    --main-blue: #45567d;
+    --main-gray: #303841;
+    --sec-red: #dd3f31;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -14,40 +26,100 @@ body{
     font-size: 1.6rem;
     font-family: 'Titillium Web', sans-serif;;
     height: 100vh;
-    overflow-y: hidden;
+    color: var(--main-white);
 }
 
-header{
+.header-nav{
     position: sticky;
     top:0;
     width:100%;
-    background-color: red;
-    height: 3%;
+    background-color: var(--main-red);
+    height: 30px;
 }
 
 .name{
-    font-family: 'Yellowtail', cursive;
+    /* font-family: 'Yellowtail', cursive; */
     font-size: 1.2em;
 }
 
-.container{
-    scroll-snap-type: y mandatory;
-    overflow-y: scroll;
-    height: 100vh;
-}
-
+/* 
 section{
     height: 100vh;
-    scroll-snap-align: start;
+} */
 
+section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 400px;
+    padding-top: 100px;
 }
 
 .welcome-section{
-    background-color: brown;
+    background-color: var(--main-gray);
+    background-color: #0f0f10;
+    /* background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%); */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
 }
+
+
 .projects-section{
-    background-color: blue;
+    background-color: var(--sec-red);
+    display: flex;
 }
+
+.project-tile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: brown;
+    margin: 10px;
+    width: 180px;
+    height: 150px;
+}
+
+.project-image{
+    width: 50px;
+    height: 50px;
+}
+
+.project-buttons-container{
+    display: flex;
+    justify-content: space-around;
+}
+
 .about-section{
-    background-color: green;
+    background-color: var(--main-gray);
+}
+
+@media screen {
+    
+}
+
+/* Curved bg with SVG via https://www.shapedivider.app/ */
+
+.wave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.wave svg {
+    position: relative;
+    display: block;
+    width: calc(103% + 1.3px);
+    height: 262px;
+}
+
+.wave .shape-fill {
+    fill: hsl(240, 3%, 6%);
 }
